@@ -1,0 +1,128 @@
+@import "src/@fuse/scss/fuse";
+@mixin _hfCommon-guru() {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    z-index: 4;
+    // ::ng-deep mat-toolbar {
+    //     height: 40px;
+    // }
+}
+@mixin guru-header() {
+    ::ng-deep .guru-header {
+        position: relative;
+        border-bottom: 1px solid #c9c9c9;
+        @include _hfCommon-guru();
+        &.no-padding,
+        &.p-0 {
+            mat-toolbar {
+                @include media-breakpoint("lg") {
+                    padding: 0px;
+                }
+            }
+        }
+    }
+}
+@mixin guru-content() {
+    ::ng-deep .guru-content {
+        background-color: #fff;
+        background-clip: border-box;
+        position: relative;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-flex: 1;
+        flex: 1 1 0%;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+        overflow-x: auto;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 16px;
+    }
+}
+@mixin guru-footer() {
+    ::ng-deep .guru-footer {
+        border-top: 1px solid #c9c9c9;
+        @include _hfCommon-guru();
+        &.no-padding,
+        &.p-0 {
+            mat-toolbar {
+                @include media-breakpoint("lg") {
+                    padding: 0px;
+                }
+            }
+        }
+    }
+}
+
+@mixin container-guru() {
+    position: relative;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-flex: 1;
+    flex: 1 1 0%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    min-width: 0;
+
+    @include guru-header();
+    @include guru-content();
+    @include guru-footer();
+}
+:host {
+    position: relative;
+    flex: 1 1 auto;
+    width: 100%;
+    height: 100%;
+    &.gb > mat-sidenav-container {
+        > .container-guru:n {
+            border: 1px solid #c9c9c9;
+        }
+    }
+    &.gbr > mat-sidenav-container {
+        > .container-guru {
+            border-right: 1px solid #c9c9c9;
+        }
+    }
+    &.gbl > mat-sidenav-container {
+        > .container-guru {
+            border-left: 1px solid #c9c9c9;
+        }
+    }
+    &.gbt > mat-sidenav-container {
+        > .container-guru {
+            border-top: 1px solid #c9c9c9;
+        }
+    }
+    &.gbb > mat-sidenav-container {
+        > .container-guru {
+            border-bottom: 1px solid #c9c9c9;
+        }
+    }
+    .container-guru {
+        @include container-guru();
+    }
+
+    mat-sidenav.guru-nav-left,
+    mat-sidenav.guru-nav-right {
+        width: 200px;
+        ::ng-deep .mat-drawer-inner-container {
+            @include container-guru();
+        }
+    }
+
+    .guru-sidebar {
+        position: relative;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-flex: 1;
+        flex: 1 1 0%;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+        min-width: 0;
+    }
+}

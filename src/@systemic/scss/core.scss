@@ -1,0 +1,11 @@
+$mat-toolbar-minimum-height: 44px;
+$mat-toolbar-height-desktop: 44px;
+$mat-toolbar-height-mobile: 44px;
+
+$mat-toolbar-desktop-density-config: (
+    height: (
+        default: $mat-toolbar-height-desktop,
+        maximum: $mat-toolbar-maximum-height-desktop,
+        minimum: $mat-toolbar-minimum-height-desktop,
+    ),
+);

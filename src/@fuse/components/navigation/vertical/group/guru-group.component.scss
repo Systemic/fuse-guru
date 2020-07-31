@@ -1,0 +1,9 @@
+:host {
+    .folded:not(.unfolded) & {
+        > .group-title {
+            &:before {
+                min-width: 2.6rem;
+            }
+        }
+    }
+}

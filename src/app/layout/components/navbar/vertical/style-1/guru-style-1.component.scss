@@ -1,0 +1,22 @@
+@import "src/@fuse/scss/fuse";
+@import "src/@systemic/scss/core";
+
+navbar {
+    navbar-vertical-style-1 {
+        .navbar-top {
+            min-height: $mat-toolbar-height-desktop;
+            max-height: $mat-toolbar-height-desktop;
+            height: $mat-toolbar-height-desktop;
+        }
+    }
+
+    fuse-nav-vertical-group {
+        .folded:not(.unfolded) & {
+            > .group-title {
+                &:before {
+                    margin: 0 12px;
+                }
+            }
+        }
+    }
+}

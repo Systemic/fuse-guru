@@ -1,0 +1,28 @@
+@import "src/@fuse/scss/fuse";
+@import "src/@systemic/scss/core";
+toolbar {
+    .user-button,
+    fuse-search-bar,
+    .language-button,
+    .chat-panel-toggle-button,
+    .quick-panel-toggle-button {
+        min-width: $mat-toolbar-height-desktop;
+        height: $mat-toolbar-height-desktop;
+
+        @include media-breakpoint("xs") {
+            height: $mat-toolbar-height-mobile;
+        }
+    }
+    .navbar-toggle-button {
+        min-width: $mat-toolbar-height-desktop;
+        height: $mat-toolbar-height-desktop;
+    }
+
+    .toolbar-separator {
+        height: $mat-toolbar-height-desktop;
+
+        @include media-breakpoint("xs") {
+            height: $mat-toolbar-height-mobile;
+        }
+    }
+}

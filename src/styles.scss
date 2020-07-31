@@ -1,0 +1,16 @@
+// Import Fuse core library
+@import "@fuse/scss/core";
+
+@import "@systemic/scss/core";
+
+// Import app.theme.scss
+@import "app/app.theme";
+
+@import "@systemic/scss/theme";
+
+html {
+    font-family: "Roboto", "Muli", "Helvetica Neue", "Arial", sans-serif;
+}
+body {
+    font-size: 12px;
+}

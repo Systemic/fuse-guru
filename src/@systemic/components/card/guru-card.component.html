@@ -1,0 +1,15 @@
+<mat-sidenav-container fxFill>
+    <mat-sidenav [style.width.px]="_leftWidth" *ngIf="sidebar.left" [disableClose]="true" #MatNavLeft
+        class="guru-nav-left" position="start">
+        <ng-container *ngTemplateOutlet="sidebar.left.template"> </ng-container>
+    </mat-sidenav>
+    <mat-sidenav [style.width.px]="_rightWidth" *ngIf="sidebar.right" [disableClose]="true" #MatNavRight
+        class="guru-nav-right" position="end">
+        <ng-container *ngTemplateOutlet="sidebar.right.template"> </ng-container>
+    </mat-sidenav>
+    <mat-sidenav-content class="container-guru">
+        <ng-content select="guru-header"></ng-content>
+        <ng-content select="guru-content"></ng-content>
+        <ng-content select="guru-footer"></ng-content>
+    </mat-sidenav-content>
+</mat-sidenav-container>

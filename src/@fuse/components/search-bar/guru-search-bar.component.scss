@@ -1,0 +1,46 @@
+@import "src/@fuse/scss/fuse";
+@import "src/@systemic/scss/core";
+
+:host {
+    .fuse-search-bar {
+        min-width: $mat-toolbar-height-desktop;
+        height: $mat-toolbar-height-desktop;
+
+        @include media-breakpoint("xs") {
+            height: $mat-toolbar-height-mobile;
+        }
+        .fuse-search-bar-content {
+            .fuse-search-bar-expander,
+            .fuse-search-bar-collapser {
+                padding: 0 10px;
+                width: $mat-toolbar-height-desktop !important;
+                height: $mat-toolbar-height-desktop !important;
+                line-height: $mat-toolbar-height-desktop !important;
+
+                @include media-breakpoint("xs") {
+                    height: $mat-toolbar-height-desktop !important;
+                    line-height: $mat-toolbar-height-desktop !important;
+                }
+            }
+
+            .fuse-search-bar-loader {
+                width: $mat-toolbar-height-desktop !important;
+                height: $mat-toolbar-height-desktop !important;
+                line-height: $mat-toolbar-height-desktop !important;
+
+                @include media-breakpoint("xs") {
+                    height: $mat-toolbar-height-mobile !important;
+                    line-height: $mat-toolbar-height-mobile !important;
+                }
+            }
+
+            #fuse-search-bar-input {
+                min-height: $mat-toolbar-height-desktop;
+
+                @include media-breakpoint("xs") {
+                    min-height: $mat-toolbar-height-mobile;
+                }
+            }
+        }
+    }
+}
