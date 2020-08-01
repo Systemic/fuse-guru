@@ -19,7 +19,13 @@ export class SampleComponent implements OnInit {
     rowData: any;
 
     columnDefs = [
-        { headerName: 'make', field: 'make', sortable: true, filter: true, checkboxSelection: true },
+        {
+            checkboxSelection: true,
+            headerCheckboxSelection: true,
+            width: 50,
+            suppressMenu: true,
+        },
+        { headerName: 'make', field: 'make', sortable: true, filter: true, },
         { headerName: 'model', field: 'model', sortable: true, filter: true },
         { headerName: 'price', field: 'price', sortable: true, filter: true },
         { headerName: 'make1', field: 'make', sortable: true, filter: true },
@@ -52,7 +58,7 @@ export class SampleComponent implements OnInit {
 
     ngOnInit(): void {
         // this.srvApp.getData();
-        this.rowData = this.http.get('http://localhost:4520/assets/sample.json');
+        this.rowData = this.http.get('http://192.168.0.115:4520/assets/sample.json');
 
         console.log(this.rowData);
 

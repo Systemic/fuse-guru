@@ -2,16 +2,14 @@
 
     <guru-card>
 
-        <guru-header>
-
-        </guru-header>
+        <!-- <guru-header></guru-header> -->
         <guru-content class="p-0">
             <ag-grid-angular #agPermission style="width: 100%; height: 100%;" id="myGrid" class="ag-theme-alpine"
-                [gridOptions]="agSampleOption" [rowData]="rowData | async" [columnDefs]="columnDefs"
+                [gridOptions]="agSampleOption" [sideBar]="true" [rowData]="rowData | async" [columnDefs]="columnDefs"
                 rowSelection="multiple">
             </ag-grid-angular>
         </guru-content>
-        <guru-footer></guru-footer>
+        <!-- <guru-footer></guru-footer> -->
     </guru-card>
 
 </div>

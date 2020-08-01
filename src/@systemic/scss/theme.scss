@@ -1,2 +1,6 @@
-@import "partials/angular-material-fix";
+// @import "partials/angular-material-fix";
 @import "partials/navigation";
+@import "partials/scrollbars";
+
+@import "partials/plugins/ag-grid";
+@import "partials/plugins/perfect-scrollbar";

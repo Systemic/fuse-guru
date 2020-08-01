@@ -8,13 +8,8 @@
 
 @import "@systemic/scss/theme";
 
-@import "../node_modules/ag-grid-community/src/styles/ag-grid.scss";
-@import "../node_modules/ag-grid-community/src/styles/ag-theme-alpine/sass/ag-theme-alpine-mixin.scss";
-.ag-theme-alpine {
-    @include ag-theme-alpine();
-}
 html {
-    font-family: "Roboto", "Muli", "Helvetica Neue", "Arial", sans-serif;
+    font-family: $guru-font-family;
 }
 body {
     font-size: 12px;
