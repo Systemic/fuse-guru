@@ -31,9 +31,15 @@ $ag-grid-config: (
 .theme-default,
 .theme-yellow-light {
     @include ag-theme-alpine($ag-grid-config);
+    .ag-cell {
+        line-height: 24px;
+    }
 }
 
 .theme-pink-dark,
 .theme-blue-gray-dark {
     @include ag-theme-alpine-dark($ag-grid-config);
+    .ag-cell {
+        line-height: 24px;
+    }
 }
