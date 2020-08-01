@@ -16,8 +16,8 @@ export const AgGridExOptions: GridOptions = {
     suppressMovableColumns: true,
     suppressDragLeaveHidesColumns: true,
     enableColResize: false,
-    headerHeight: 30,
+    // headerHeight: 30,
     gridAutoHeight: false,
-    rowHeight: 30,
+    // rowHeight: 30,
     rowSelection: 'multiple'
 };
