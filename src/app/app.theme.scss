@@ -68,7 +68,7 @@ $typography: mat-typography-config(
     $body-2: mat-typography-level(14px, 24px, 600),
     $button: mat-typography-level(14px, 14px, 600),
     $input: mat-typography-level(16px, 1.125, 400)
-        // line-height must be unitless !!!,,,,,,,,,,,,,,,,,,,,,,
+        // line-height must be unitless !!!,,,,,,,,,,,,,,,,,,,,,,,
 );
 
 // Setup the typography
@@ -175,7 +175,7 @@ body.theme-yellow-light {
 
 // Define the primary, accent and warn palettes
 $blue-gray-dark-theme-primary-palette: mat-palette($mat-blue);
-$blue-gray-dark-theme-accent-palette: mat-palette($mat-blue-gray);
+$blue-gray-dark-theme-accent-palette: mat-palette($mat-blue);
 $blue-gray-dark-theme-warn-palette: mat-palette($mat-red);
 
 // Create the Material theme object

@@ -11,3 +11,11 @@ $mat-toolbar-desktop-density-config: (
         minimum: $mat-toolbar-minimum-height-desktop,
     ),
 );
+
+$mat-toolbar-mobile-density-config: (
+    height: (
+        default: $mat-toolbar-height-mobile,
+        maximum: $mat-toolbar-maximum-height-mobile,
+        minimum: $mat-toolbar-minimum-height-mobile,
+    ),
+);

@@ -18,8 +18,8 @@
                 line-height: $mat-toolbar-height-desktop !important;
 
                 @include media-breakpoint("xs") {
-                    height: $mat-toolbar-height-desktop !important;
-                    line-height: $mat-toolbar-height-desktop !important;
+                    height: $mat-toolbar-height-mobile !important;
+                    line-height: $mat-toolbar-height-mobile !important;
                 }
             }
 

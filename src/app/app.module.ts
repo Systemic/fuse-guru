@@ -17,6 +17,13 @@ import { fuseConfig } from 'app/fuse-config';
 import { AppComponent } from 'app/app.component';
 import { LayoutModule } from 'app/layout/layout.module';
 import { SampleModule } from 'app/main/sample/sample.module';
+import { FormsModule } from '@angular/forms';
+import { NZ_I18N } from 'ng-zorro-antd/i18n';
+import { en_US } from 'ng-zorro-antd/i18n';
+import { registerLocaleData } from '@angular/common';
+import en from '@angular/common/locales/en';
+
+registerLocaleData(en);
 
 const appRoutes: Routes = [
     {
@@ -53,11 +60,13 @@ const appRoutes: Routes = [
 
         // App modules
         LayoutModule,
-        SampleModule
+        SampleModule,
+        FormsModule
     ],
     bootstrap   : [
         AppComponent
-    ]
+    ],
+    providers: [{ provide: NZ_I18N, useValue: en_US }]
 })
 export class AppModule
 {

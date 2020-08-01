@@ -1,0 +1,37 @@
+@import "../node_modules/ag-grid-community/src/styles/ag-grid.scss";
+@import "../node_modules/ag-grid-community/src/styles/ag-theme-alpine/sass/ag-theme-alpine-mixin.scss";
+@import "../node_modules/ag-grid-community/src/styles/ag-theme-alpine-dark/sass/ag-theme-alpine-dark-mixin.scss";
+@import "@systemic/scss/core";
+
+$ag-grid-config: (
+    // Fonts
+        font-family: $guru-font-family,
+    font-size: 11,
+    // grid-size is the main control for affecting how tightly data and UI elements are packed together. All padding and spacing in the grid is defined as a multiple of grid-size, so increasing it will make most components larger by increasing their internal white space while leaving the size of text and icons unchanged.
+        grid-size: 5px,
+    // The size of square icons and icon-buttons
+        icon-size: 12px,
+    // Height of grid rows
+        row-height: ag-derived(grid-size, $times: 6, $plus: 1),
+    // Height of header rows
+        header-height: ag-derived(row-height),
+    // Height of items in lists (example of lists are dropdown select inputs and column menu set filters)
+        list-item-height: ag-derived(grid-size, $times: 5),
+    // Default border for cells. This can be used to specify the border-style and border-color properties e.g. `dashed red` but the border-width is fixed at 1px.
+        cell-horizontal-border: solid ag-derived(border-color, $opacity: 0.5),
+    // Separator between columns in the header. Displays between all header cells For best UX, use either this or header-column-resize-handle but not both
+        header-column-separator: true,
+    header-column-separator-height: 100%,
+    header-column-separator-width: 1px,
+    header-column-separator-color: ag-derived(border-color, $opacity: 0.5)
+);
+
+.theme-default,
+.theme-yellow-light {
+    @include ag-theme-alpine($ag-grid-config);
+}
+
+.theme-pink-dark,
+.theme-blue-gray-dark {
+    @include ag-theme-alpine-dark($ag-grid-config);
+}

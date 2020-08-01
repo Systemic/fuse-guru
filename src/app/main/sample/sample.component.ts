@@ -22,7 +22,7 @@ export class SampleComponent implements OnInit {
         {
             checkboxSelection: true,
             headerCheckboxSelection: true,
-            width: 50,
+            width: 44,
             suppressMenu: true,
         },
         { headerName: 'make', field: 'make', sortable: true, filter: true, },
