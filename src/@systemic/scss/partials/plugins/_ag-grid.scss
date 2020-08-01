@@ -19,13 +19,15 @@ $ag-grid-config: (
         list-item-height: ag-derived(grid-size, $times: 5),
     // Default border for cells. This can be used to specify the border-style and border-color properties e.g. `dashed red` but the border-width is fixed at 1px.
         cell-horizontal-border: solid ag-derived(border-color, $opacity: 0.5),
+    // Horizontal padding for grid and header cells (vertical padding is not set explicitly, but inferred from row-height / header-height
+        cell-horizontal-padding: ag-derived(grid-size),
     // Separator between columns in the header. Displays between all header cells For best UX, use either this or header-column-resize-handle but not both
         header-column-separator: true,
     header-column-separator-height: 100%,
     header-column-separator-width: 1px,
     header-column-separator-color: ag-derived(border-color, $opacity: 0.5)
 );
-
+// $ag-theme-alpine-dark-default-params: map-merge($ag-theme-alpine-default-params, $ag-theme-alpine-dark-default-params)
 .theme-default,
 .theme-yellow-light {
     @include ag-theme-alpine($ag-grid-config);

@@ -8,6 +8,7 @@ import { locale as turkish } from './i18n/tr';
 import { HttpClient } from '@angular/common/http';
 import { GridOptions } from 'ag-grid-community';
 import { AgGridExOptions } from '@systemic/components';
+import { CrazyKey } from '@systemic/library/crazy-key';
 
 @Component({
     selector: 'sample',
@@ -54,11 +55,14 @@ export class SampleComponent implements OnInit {
     ) {
         this._fuseTranslationLoaderService.loadTranslations(english, turkish);
         this.agSampleOption = { ...AgGridExOptions, ...this.agSampleOption };
+
+
+        console.log(CrazyKey.aes_encryption('Hello', '4562313789'));
     }
 
     ngOnInit(): void {
         // this.srvApp.getData();
-        this.rowData = this.http.get('http://192.168.0.115:4520/assets/sample.json');
+        this.rowData = this.http.get('/assets/sample.json');
 
         console.log(this.rowData);
 
